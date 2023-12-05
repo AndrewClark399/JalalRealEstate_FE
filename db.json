@@ -35,6 +35,15 @@
       "email": "respectmyauthority@southpark.com",
       "address": "First House, South Park, SP1 2SP",
       "id": 4
+    },
+    {
+      "title": "Mr",
+      "firstName": "Jal",
+      "surname": "AL",
+      "tel": "07556214886",
+      "email": "dontaskme@no.com",
+      "address": "11 bean grove, be1 8dg",
+      "id": 5
     }
   ],
   "sellers": [
@@ -54,6 +63,36 @@
       "tel": "07904093171",
       "email": "whoami@universe.com",
       "address": "Somewhere over the Rainbow Street, La La Land, LA1 2RA",
+      "id": 2
+    }
+  ],
+  "properties": [
+    {
+      "address": "15 Jason rd,sd town,sd1 1ds",
+      "offersintheregionof": "250",
+      "typeofproperty": "large house",
+      "squarefootage": "100",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "garden": "lovely",
+      "outbuildings": "none",
+      "freehold": "freehold",
+      "sellerid": "22",
+      "uploadimages": "none",
+      "id": 1
+    },
+    {
+      "address": "666 Devious Drive, Backally, AB66 6AB",
+      "offersinregionof": "1",
+      "typeofproperty": "Detached house",
+      "squarefootage": "1",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "garden": "Pine forest. Resident owl population",
+      "outbuildings": "6 sheds",
+      "freehold": "Freehold",
+      "sellerid": "1",
+      "uploadimages": "no",
       "id": 2
     }
   ]
