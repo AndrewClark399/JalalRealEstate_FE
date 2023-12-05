@@ -1,0 +1,31 @@
+{
+  "buyers": [
+    {
+      "id": 1,
+      "title": "Honourable",
+      "firstName": "Malachie",
+      "surname": "Awesome",
+      "tel": "07105395012",
+      "email": "awesome@irock.com",
+      "address": "9 Palace Street, Cheltenham, 1AB 2QU"
+    },
+    {
+      "title": "Rev",
+      "firstName": "Archibold",
+      "surname": "Green",
+      "tel": "07478296821",
+      "email": "therev@archiegreen.com",
+      "address": "The Old Mance, Green Road, Holyville, HL99 0BV",
+      "id": 2
+    },
+    {
+      "title": "Dr",
+      "firstName": "Payne",
+      "surname": "Matters",
+      "tel": "07381952285",
+      "email": "ouchie@donthurtme.com",
+      "address": "9 Zip Drive, Coatville, CO29 6ZP",
+      "id": 3
+    }
+  ]
+}
