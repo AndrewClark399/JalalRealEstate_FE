@@ -26,6 +26,35 @@
       "email": "ouchie@donthurtme.com",
       "address": "9 Zip Drive, Coatville, CO29 6ZP",
       "id": 3
+    },
+    {
+      "title": "Mr",
+      "firstName": "Eric",
+      "surname": "Cartman",
+      "tel": "0790409471",
+      "email": "respectmyauthority@southpark.com",
+      "address": "First House, South Park, SP1 2SP",
+      "id": 4
+    }
+  ],
+  "sellers": [
+    {
+      "title": "Mr",
+      "firstName": "Frodo",
+      "surname": "Baggins",
+      "tel": "07905097731",
+      "email": "frodolovesthering@gmail.com",
+      "address": "Bag End, Hobbiton, The Shire, SH13 4DR",
+      "id": 1
+    },
+    {
+      "title": "Ms",
+      "firstName": "Personality",
+      "surname": "Reject",
+      "tel": "07904093171",
+      "email": "whoami@universe.com",
+      "address": "Somewhere over the Rainbow Street, La La Land, LA1 2RA",
+      "id": 2
     }
   ]
 }
