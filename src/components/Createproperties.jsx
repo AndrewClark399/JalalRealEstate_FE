@@ -14,7 +14,7 @@ function CreateProperties() {
     const [freehold, setFreehold] = useState("");
     const [sellerid, setSellerId] = useState("");
     const [uploadimages, setUploadImages] = useState("");
-    const [propertystatus, setPropertyStatus] = useState ("")
+    const [propertystatus, setPropertyStatus] = useState("")
 
 
 
@@ -98,16 +98,34 @@ function CreateProperties() {
             onChange={e => setBathrooms(e.target.value)}
             required
         />
-        <label htmlFor="PropertyGarden" className="form-label">Garden Description</label>
-        <input
-            id="propertyGarden"
-            name="Garden"
-            className="form-control"
-            type="text"
-            value={garden}
-            onChange={e => setGarden(e.target.value)}
-            required
-        />
+
+        <div>
+            <label className="form-check-label" htmlFor="propertyGardenYes">Garden</label>
+            <div className="form-check">
+                <label className="form-check-label" htmlFor="propertyGardenYes"></label>
+                <input
+                    id="propertyGardenYes"
+                    type="radio"
+                    name="Garden"
+                    value="true"
+                    className="form-check-input"
+                    checked={garden}
+                    onChange={e => setGarden(e.target.value)}
+                />
+                <label className="form-check-label" htmlFor="propertyGardenYes">Yes</label>
+            </div>
+            <div className="form-check">
+                <input
+                    id="propertyGardenNo"
+                    type="radio"
+                    name="Garden"
+                    value="false"
+                    className="form-check-input"
+                    onChange={e => setGarden(e.target.value)}
+                />
+                <label className="form-check-label" htmlFor="propertyGardenNo">No</label>
+            </div>
+        </div>
         <label htmlFor="PropertyOutbuildings" className="form-label">Outbuilding Description</label>
         <input
             id="propertyOutbuildings"
@@ -149,13 +167,46 @@ function CreateProperties() {
 
         />
 
-        <label htmlFor="propertystatus" className="form-label">Property Status</label>
-        <select value={propertystatus}
-        onChange={e => setPropertyStatus (e.target.value)}>
-            <option value="For Sale">For Sale</option>
-            <option value="Withdrawn">Withdrawn</option>
-            <option value="Sold">Sold</option>
-        </select>
+<div>
+            <label className="form-check-label" htmlFor="propertyStatus">Property Status</label>
+            <div className="form-check">
+                <label className="form-check-label" htmlFor="propertyStatusForSale">For Sale</label>
+                <input
+                    id="propertyStatusForSale"
+                    type="radio"
+                    name="PropertyStatus"
+                    value="For Sale"
+                    className="form-check-input"
+                    checked={propertystatus}
+                    onChange={e => setPropertyStatus(e.target.value)}
+                />
+                 
+            </div>
+            <div className="form-check">
+                <input
+                    id="propertyStatusSold"
+                    type="radio"
+                    name="PropertyStatus"
+                    value="Sold"
+                    className="form-check-input"
+                    onChange={e => setPropertyStatus(e.target.value)}
+                />
+                <label className="form-check-label" htmlFor="propertyGardenNo">Sold</label>
+            </div>
+            <div className="form-check">
+                <input
+                    id="propertyStatusWithdrawn"
+                    type="radio"
+                    name="PropertyStatus"
+                    value="Withdrawn"
+                    className="form-check-input"
+                    onChange={e => setPropertyStatus(e.target.value)}
+                />
+                <label className="form-check-label" htmlFor="propertyGardenNo">Withdrawn</label>
+            </div>
+        </div>
+
+     
 
         <div className="mt-2">
             <button className="btn btn-success" type="submit">Submit</button>

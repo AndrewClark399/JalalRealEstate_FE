@@ -1,13 +1,17 @@
 
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 function GetProperties() {
 
-
+    const [search, setSearch] = useState("");
     const [properties, setProperties] = useState("");
+    const [searchBedrooms, setSearchBedrooms] = useState(0);
 
-
+useEffect(() => {
+    handleClick()
+}, []);
 
     function handleClick() {
 
@@ -26,7 +30,8 @@ function GetProperties() {
     //the below is to convert the json data into html so that it can be rendered on the page
 
     for (const property of properties) {
-
+        if ((search==="" && searchBedrooms === 0) || (property.address.includes(search) && property.bedrooms >= searchBedrooms)) {
+            
         //use a table or cards to include all of the data or else get rid of the button 
 
         displayProperties.push(
@@ -55,7 +60,7 @@ function GetProperties() {
             </div>
 
         )
-
+        }
     }
 
 
@@ -63,8 +68,10 @@ function GetProperties() {
         <>
             <div className='container'>
                 <div className='row'>
-                <button onClick={handleClick}>Display all Properties</button>
+                <input value = {search} onChange = {e => setSearch(e.target.value)}/>
+                <input type="range" min = "1" max = "10" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>
                     <p>{displayProperties}</p>
+                
                 </div>
             </div>
         </>
