@@ -14,7 +14,8 @@ function CreateProperties() {
     const [freehold, setFreehold] = useState("");
     const [sellerid, setSellerId] = useState("");
     const [uploadimages, setUploadImages] = useState("");
-    const [propertystatus, setPropertyStatus] = useState("")
+    const [propertystatus, setPropertyStatus] = useState ("")
+
 
 
     return (<form onSubmit={e => {
@@ -149,11 +150,11 @@ function CreateProperties() {
         />
 
         <label htmlFor="propertystatus" className="form-label">Property Status</label>
-        <select>
-            <option value="">For Sale</option>
-            <option value="">Withdrawn</option>
-            <option value="">Sold</option>
-
+        <select value={propertystatus}
+        onChange={e => setPropertyStatus (e.target.value)}>
+            <option value="For Sale">For Sale</option>
+            <option value="Withdrawn">Withdrawn</option>
+            <option value="Sold">Sold</option>
         </select>
 
         <div className="mt-2">
