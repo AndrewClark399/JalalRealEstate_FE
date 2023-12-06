@@ -1,4 +1,5 @@
 import CreateBuyers from "./CreateBuyers";
+import GetBuyer from "./GetBuyer";
 
 function Buyers() {
     return ( 
@@ -6,6 +7,7 @@ function Buyers() {
 <h1>Jalal is the place to buy!</h1>
 
 <CreateBuyers/>
+<GetBuyer/>
 </div>
      );
 }

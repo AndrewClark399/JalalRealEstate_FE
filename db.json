@@ -44,6 +44,15 @@
       "email": "dontaskme@no.com",
       "address": "11 bean grove, be1 8dg",
       "id": 5
+    },
+    {
+      "title": "Mr",
+      "firstName": "Harry",
+      "surname": "Trotter",
+      "tel": "07845654444",
+      "email": "pigwizzard@hogwards.com",
+      "address": "2 snort drive, hoggersville, PG1 1BT",
+      "id": 6
     }
   ],
   "sellers": [
