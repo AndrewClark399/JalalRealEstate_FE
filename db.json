@@ -105,63 +105,21 @@
       "id": 2
     },
     {
-      "address": "Property Test",
-      "offersinregionof": "10000",
-      "typeofproperty": "10",
-      "squarefootage": "10",
-      "bedrooms": "1",
-      "bathrooms": "1",
-      "garden": "Lovely",
-      "outbuildings": "No",
+
+      "address": "1 Top Coders Avenue, Best Team Town, BT1 2AW",
+      "offersinregionof": "3000000",
+      "typeofproperty": "Mansion",
+      "squarefootage": "500000",
+      "bedrooms": "52",
+      "bathrooms": "47",
+      "garden": "Enormous ",
+      "outbuildings": "Two pools",
       "freehold": "Freehold",
-      "sellerid": "12345",
-      "uploadimages": "",
-      "id": 3
-    },
-    {
-      "address": "Test",
-      "offersinregionof": "10",
-      "typeofproperty": "House",
-      "squarefootage": "1",
-      "bedrooms": "2",
-      "bathrooms": "34",
-      "garden": "4",
-      "outbuildings": "5",
-      "freehold": "Freehold",
-      "sellerid": "12345",
+      "sellerid": "19374",
       "uploadimages": "",
       "propertystatus": "",
-      "id": 4
-    },
-    {
-      "address": "Test2",
-      "offersinregionof": "1000",
-      "typeofproperty": "House",
-      "squarefootage": "34",
-      "bedrooms": "1",
-      "bathrooms": "2",
-      "garden": "3",
-      "outbuildings": "4",
-      "freehold": "Freehold",
-      "sellerid": "1232414",
-      "uploadimages": "",
-      "propertystatus": "Withdrawn",
-      "id": 5
-    },
-    {
-      "address": "1 Top Coders Avenue, Best Team Town, BT1 2AW",
-      "offersinregionof": "1",
-      "typeofproperty": "10",
-      "squarefootage": "1",
-      "bedrooms": "1",
-      "bathrooms": "11",
-      "garden": "11",
-      "outbuildings": "y",
-      "freehold": "Freehold",
-      "sellerid": "3114",
-      "uploadimages": "",
-      "propertystatus": "Sold",
-      "id": 6
+      "id": 3
+
     }
   ]
 }

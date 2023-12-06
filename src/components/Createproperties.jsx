@@ -148,6 +148,7 @@ function CreateProperties() {
             onChange={e => setUploadImages(e.target.value)}
 
         />
+
         <label htmlFor="propertystatus" className="form-label">Property Status</label>
         <select value={propertystatus}
         onChange={e => setPropertyStatus (e.target.value)}>
@@ -155,6 +156,7 @@ function CreateProperties() {
             <option value="Withdrawn">Withdrawn</option>
             <option value="Sold">Sold</option>
         </select>
+
         <div className="mt-2">
             <button className="btn btn-success" type="submit">Submit</button>
         </div>
