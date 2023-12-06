@@ -103,6 +103,21 @@
       "sellerid": "1",
       "uploadimages": "no",
       "id": 2
+    },
+    {
+      "address": "1 Top Coders Avenue, Best Team Town, BT1 2AW",
+      "offersinregionof": "3000000",
+      "typeofproperty": "Mansion",
+      "squarefootage": "500000",
+      "bedrooms": "52",
+      "bathrooms": "47",
+      "garden": "Enormous ",
+      "outbuildings": "Two pools",
+      "freehold": "Freehold",
+      "sellerid": "19374",
+      "uploadimages": "",
+      "propertystatus": "",
+      "id": 3
     }
   ]
 }
