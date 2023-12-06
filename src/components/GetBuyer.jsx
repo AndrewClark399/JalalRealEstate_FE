@@ -30,7 +30,7 @@ function GetBuyer() {
         //use a table or cards to include all of the data or else get rid of the button 
 
         displayBuyers.push(
-            <div className='col'>
+            <div className='col-4'>
                 <div className='card'>
                     <div className='card-body'>
 
@@ -56,10 +56,12 @@ function GetBuyer() {
 
     return (
         <>
-
-            <button onClick={handleClick} >Current List of Buyers</button>
-            <p>{displayBuyers}</p>
-
+            <div className='container'>
+                <div className='row'>
+                <button onClick={handleClick}>Display all Buyers</button>
+                    <p>{displayBuyers}</p>
+                </div>
+            </div>
         </>
     );
 }
