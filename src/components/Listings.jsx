@@ -1,5 +1,6 @@
 import CreateProperties from "./Createproperties";
 import GetProperties from "./DisplayProperties";
+import SearchProperties from "./SearchProperties";
 
 function Listings() {
     return ( 
@@ -8,6 +9,8 @@ function Listings() {
 <CreateProperties/>
 <br />
 <GetProperties/>
+<br />
+
 </>
      );
 }

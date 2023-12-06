@@ -105,7 +105,6 @@
       "id": 2
     },
     {
-
       "address": "1 Top Coders Avenue, Best Team Town, BT1 2AW",
       "offersinregionof": "3000000",
       "typeofproperty": "Mansion",
@@ -119,7 +118,36 @@
       "uploadimages": "",
       "propertystatus": "",
       "id": 3
-
+    },
+    {
+      "address": "35 New Lane, Oxford, OX34 2KS",
+      "offersinregionof": "2500000",
+      "typeofproperty": "Detatched",
+      "squarefootage": "10000",
+      "bedrooms": "6",
+      "bathrooms": "6",
+      "garden": "true",
+      "outbuildings": "Stables, 3 Sheds, Man cave",
+      "freehold": "Freehold",
+      "sellerid": "57",
+      "uploadimages": "",
+      "propertystatus": "",
+      "id": 4
+    },
+    {
+      "address": "7 Generic Grove, Gillingham, GL7 7GG",
+      "offersinregionof": "777777",
+      "typeofproperty": "flat",
+      "squarefootage": "30000",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "garden": "false",
+      "outbuildings": "No",
+      "freehold": "Leasehold",
+      "sellerid": "31",
+      "uploadimages": "",
+      "propertystatus": "For Sale",
+      "id": 5
     }
   ]
 }
