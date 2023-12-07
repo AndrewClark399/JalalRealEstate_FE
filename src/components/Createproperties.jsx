@@ -20,7 +20,7 @@ function CreateProperties() {
 
     return (<form onSubmit={e => {
         e.preventDefault();
-        axios.post("http://localhost:5000/properties", { address, offersinregionof, typeofproperty, squarefootage, bedrooms, bathrooms, garden, outbuildings, freehold, sellerid, uploadimages, propertystatus })
+        axios.post("http://localhost:5000/properties", { address, offersinregionof: parseInt(offersinregionof), typeofproperty, squarefootage: parseInt(squarefootage), bedrooms: parseInt(bedrooms), bathrooms: parseInt(bathrooms), garden, outbuildings, freehold, sellerid, uploadimages, propertystatus })
             .then(response => {
                 console.log(response);
                 setAddress("");

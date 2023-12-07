@@ -1,6 +1,7 @@
 import CreateProperties from "./Createproperties";
 import GetProperties from "./DisplayProperties";
-import SearchProperties from "./SearchProperties";
+import TestIfStatements from "./TestIfStatements";
+
 
 function Listings() {
     return ( 
