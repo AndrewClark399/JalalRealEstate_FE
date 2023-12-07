@@ -1,13 +1,14 @@
-
 import axios from "axios";
 import { useState, useEffect } from "react";
 
 
 function GetProperties() {
 
-    const [search, setSearch] = useState("");
+    
     const [properties, setProperties] = useState("");
-    const [searchBedrooms, setSearchBedrooms] = useState(0);
+    const [search, setSearch] = useState("");
+    const [searchBathrooms, setSearchBathrooms] = useState("0");
+    const [searchBedrooms, setSearchBedrooms] = useState("0");
 
 useEffect(() => {
     handleClick()
@@ -30,9 +31,16 @@ useEffect(() => {
     //the below is to convert the json data into html so that it can be rendered on the page
 
     for (const property of properties) {
+        if (search && !property.address.includes(search)) continue;
+        // use < to filter out a minimum value of the data, this will not render and skip across to the next input
+        if (searchBathrooms && property.bathrooms < parseInt(searchBathrooms,10)) continue;
+        if (searchBedrooms && property.bedrooms < parseInt(searchBedrooms,10)) continue;
 
         // if the search box is empty and the bedrooms slider is set at 0,  or  the entry in included in the address and the nuber of bedrooms is above the slider value.
-        if ((search==="" && searchBedrooms === 0) || (property.address.includes(search) && property.bedrooms >= searchBedrooms)) {
+
+        //if ((search==="" && searchBedrooms === 0) || (property.address.includes(search) && property.bedrooms >= searchBedrooms)) {
+   // <input value = {search} onChange = {e => setSearch(e.target.value)}/>
+   // <input type="range" min = "1" max = "10" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>   pasrInt converts the value to a number
             
         //use a table or cards to include all of the data or else get rid of the button 
 
@@ -62,17 +70,23 @@ useEffect(() => {
             </div>
 
         )
-        }
+        
     }
 
+//if ((search==="" && searchBedrooms === 0) || (property.address.includes(search) && property.bedrooms >= searchBedrooms)) {
+   // <input value = {search} onChange = {e => setSearch(e.target.value)}/>
+   // <input type="range" min = "1" max = "10" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>
 
     return (
         <>
             <div className='container'>
                 <div className='row'>
+                
+
                 <input value = {search} onChange = {e => setSearch(e.target.value)}/>
-                <input type="range" min = "1" max = "10" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>
-                    <p>{displayProperties}</p>
+               {searchBathrooms} <input type="range" min = "1" max = "47" value = {searchBathrooms} onChange = {e => setSearchBathrooms(e.target.value)}/>
+               {searchBedrooms} <input type="range" min = "1" max = "55" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>
+                    <div>{displayProperties}</div>
                 
                 </div>
             </div>
@@ -81,7 +95,3 @@ useEffect(() => {
 }
 
 export default GetProperties;
-
-//if ((search==="" && searchBedrooms === 0) || (property.address.includes(search) && property.bedrooms >= searchBedrooms)) {
-   // <input value = {search} onChange = {e => setSearch(e.target.value)}/>
-   // <input type="range" min = "1" max = "10" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>
