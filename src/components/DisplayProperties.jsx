@@ -10,7 +10,7 @@ function GetProperties() {
     const [searchBedrooms, setSearchBedrooms] = useState(0);
     const [searchOffersInRegionOf, setSearchOffersInRegionOf] = useState(0);
     const [searchBathrooms, setSearchBathrooms] = useState(0)
-
+const [searchGardens, setSearchGardens] = useState (NaN)
 
 
 
@@ -37,10 +37,11 @@ function GetProperties() {
 
     for (const property of properties) {
 
-
+        if (search && !property.address.includes(search)) continue;  
         if (searchBedrooms && property.bedrooms < parseInt(searchBedrooms, 10)) continue;
         if (searchOffersInRegionOf && property.offersinregionof >= parseInt(searchOffersInRegionOf, 10)) continue;
         if (searchBathrooms && property.bathrooms <parseInt(searchBathrooms )) continue;
+        if (searchGardens !== NaN && property.garden != searchGardens) continue; 
 
         //use a table or cards to include all of the data or else get rid of the button 
 
@@ -76,14 +77,17 @@ function GetProperties() {
         <>
             <div className='container'>
                 <div className='row'>
+                    <h1>Search by property address</h1>
                     <input value={search} onChange={e => setSearch(e.target.value)} />
-                    <h1>Search for minimum number of bedrooms required!</h1>
+                    <h1>Search for minimum number of bedrooms required</h1>
                     {searchBedrooms} <input type="range" min="1" max="55" value={searchBedrooms} onChange={e => setSearchBedrooms(e.target.value)} />
                     <h1>Search for maximum price</h1>
                     {searchOffersInRegionOf} <input type="range" min="0" max="3000000" value={searchOffersInRegionOf} onChange={e => setSearchOffersInRegionOf(e.target.value)}/>
                     <h2>Search for bathrooms if any</h2>
                     {searchBathrooms} <input type="range" min="1" max="47" value={searchBathrooms} onChange={e => setSearchBathrooms(e.target.value)}/>
-                
+                    <h1>Garden?</h1>
+                    Yes <input checked={searchGardens==="true"} type="radio" value={"true"} onChange={e => setSearchGardens ("true")}/>
+                    No<input checked={searchGardens==="false"} type="radio" value={"false"} onChange={e => setSearchGardens ("false")}/>
                     <div>
                         {displayProperties}
                     </div>
