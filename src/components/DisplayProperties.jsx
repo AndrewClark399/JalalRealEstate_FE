@@ -9,9 +9,13 @@ function GetProperties() {
     const [properties, setProperties] = useState("");
     const [searchBedrooms, setSearchBedrooms] = useState(0);
 
-useEffect(() => {
-    handleClick()
-}, []);
+
+
+
+
+    useEffect(() => {
+        handleClick()
+    }, []);
 
     function handleClick() {
 
@@ -31,9 +35,9 @@ useEffect(() => {
 
     for (const property of properties) {
 
-        // if the search box is empty and the bedrooms slider is set at 0,  or  the entry in included in the address and the nuber of bedrooms is above the slider value.
-        if ((search==="" && searchBedrooms === 0) || (property.address.includes(search) && property.bedrooms >= searchBedrooms)) {
-            
+
+        if (searchBedrooms && property.bedrooms < parseInt(searchBedrooms, 10)) continue;
+
         //use a table or cards to include all of the data or else get rid of the button 
 
         displayProperties.push(
@@ -62,18 +66,18 @@ useEffect(() => {
             </div>
 
         )
-        }
     }
-
 
     return (
         <>
             <div className='container'>
                 <div className='row'>
-                <input value = {search} onChange = {e => setSearch(e.target.value)}/>
-                <input type="range" min = "1" max = "10" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>
-                    <p>{displayProperties}</p>
-                
+                    <input value={search} onChange={e => setSearch(e.target.value)} />
+                    <h1>Search for minimum number of bedrooms required!</h1>
+                    {searchBedrooms} <input type="range" min="1" max="55" value={searchBedrooms} onChange={e => setSearchBedrooms(e.target.value)} />
+                    <div>
+                        {displayProperties}
+                    </div>
                 </div>
             </div>
         </>
@@ -83,5 +87,5 @@ useEffect(() => {
 export default GetProperties;
 
 //if ((search==="" && searchBedrooms === 0) || (property.address.includes(search) && property.bedrooms >= searchBedrooms)) {
-   // <input value = {search} onChange = {e => setSearch(e.target.value)}/>
-   // <input type="range" min = "1" max = "10" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>
+// <input value = {search} onChange = {e => setSearch(e.target.value)}/>
+// <input type="range" min = "1" max = "10" value = {searchBedrooms} onChange = {e => setSearchBedrooms(e.target.value)}/>
