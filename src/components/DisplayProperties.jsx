@@ -8,6 +8,7 @@ function GetProperties() {
     const [search, setSearch] = useState("");
     const [properties, setProperties] = useState("");
     const [searchBedrooms, setSearchBedrooms] = useState(0);
+    const [searchOffersInRegionOf, setSearchOffersInRegionOf] = useState(0);
 
 
 
@@ -37,6 +38,7 @@ function GetProperties() {
 
 
         if (searchBedrooms && property.bedrooms < parseInt(searchBedrooms, 10)) continue;
+        if (searchOffersInRegionOf && property.offersinregionof >= parseInt(searchOffersInRegionOf, 10)) continue;
 
         //use a table or cards to include all of the data or else get rid of the button 
 
@@ -48,7 +50,7 @@ function GetProperties() {
                         <div className='card-text'>
 
                             <p className='card-title '> {property.address}</p>
-                            <p> {property.offersintheregionof}</p>
+                            <p> {property.offersinregionof}</p>
                             <p> {property.typeofproperty}</p>
                             <p> {property.squarefootage}</p>
                             <p> {property.bedrooms}</p>
@@ -75,6 +77,8 @@ function GetProperties() {
                     <input value={search} onChange={e => setSearch(e.target.value)} />
                     <h1>Search for minimum number of bedrooms required!</h1>
                     {searchBedrooms} <input type="range" min="1" max="55" value={searchBedrooms} onChange={e => setSearchBedrooms(e.target.value)} />
+                    <h1>Search for maximum price</h1>
+                    {searchOffersInRegionOf} <input type="range" min="0" max="3000000" value={searchOffersInRegionOf} onChange={e => setSearchOffersInRegionOf(e.target.value)}/>
                     <div>
                         {displayProperties}
                     </div>

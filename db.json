@@ -78,7 +78,7 @@
   "properties": [
     {
       "address": "15 Jason rd,sd town,sd1 1ds",
-      "offersintheregionof": 250,
+      "offersinregionof": 250,
       "typeofproperty": "large house",
       "squarefootage": 100,
       "bedrooms": 2,
@@ -148,6 +148,21 @@
       "uploadimages": "",
       "propertystatus": "For Sale",
       "id": 5
+    },
+    {
+      "address": "65 Highfield Road, Bognor Regis, West Sussex, PO22 8PD",
+      "offersinregionof": 250000,
+      "typeofproperty": "Terraced",
+      "squarefootage": 650,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "garden": "true",
+      "outbuildings": "None",
+      "freehold": "Freehold",
+      "sellerid": "5",
+      "uploadimages": "",
+      "propertystatus": "For Sale",
+      "id": 6
     }
   ]
 }
