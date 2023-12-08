@@ -1,7 +1,7 @@
 import CreateProperties from "./Createproperties";
 import GetProperties from "./DisplayProperties";
 import TestIfStatements from "./TestIfStatements";
-import StatusFilter from "./StatusFilter";
+
 
 
 function Listings() {
@@ -12,7 +12,7 @@ function Listings() {
 <br />
 <GetProperties/>
 <br />
- {/* <StatusFilter/> */}
+
 <br/>
 
 </>
