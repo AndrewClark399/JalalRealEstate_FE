@@ -1,0 +1,170 @@
+{
+  "buyers": [
+    {
+      "id": 1,
+      "title": "Honourable",
+      "firstName": "Malachie",
+      "surname": "Awesome",
+      "tel": "07105395012",
+      "email": "awesome@irock.com",
+      "address": "9 Palace Street, Cheltenham, 1AB 2QU"
+    },
+    {
+      "title": "Rev",
+      "firstName": "Archibold",
+      "surname": "Green",
+      "tel": "07478296821",
+      "email": "therev@archiegreen.com",
+      "address": "The Old Mance, Green Road, Holyville, HL99 0BV",
+      "id": 2
+    },
+    {
+      "title": "Dr",
+      "firstName": "Payne",
+      "surname": "Matters",
+      "tel": "07381952285",
+      "email": "ouchie@donthurtme.com",
+      "address": "9 Zip Drive, Coatville, CO29 6ZP",
+      "id": 3
+    },
+    {
+      "title": "Mr",
+      "firstName": "Eric",
+      "surname": "Cartman",
+      "tel": "0790409471",
+      "email": "respectmyauthority@southpark.com",
+      "address": "First House, South Park, SP1 2SP",
+      "id": 4
+    },
+    {
+      "title": "Mr",
+      "firstName": "Jal",
+      "surname": "AL",
+      "tel": "07556214886",
+      "email": "dontaskme@no.com",
+      "address": "11 bean grove, be1 8dg",
+      "id": 5
+    },
+    {
+      "title": "Mr",
+      "firstName": "Harry",
+      "surname": "Trotter",
+      "tel": "07845654444",
+      "email": "pigwizzard@hogwards.com",
+      "address": "2 snort drive, hoggersville, PG1 1BT",
+      "id": 6
+    }
+  ],
+  "sellers": [
+    {
+      "title": "Mr",
+      "firstName": "Frodo",
+      "surname": "Baggins",
+      "tel": "07905097731",
+      "email": "frodolovesthering@gmail.com",
+      "address": "Bag End, Hobbiton, The Shire, SH13 4DR",
+      "id": 1
+    },
+    {
+      "title": "Ms",
+      "firstName": "Personality",
+      "surname": "Reject",
+      "tel": "07904093171",
+      "email": "whoami@universe.com",
+      "address": "Somewhere over the Rainbow Street, La La Land, LA1 2RA",
+      "id": 2
+    }
+  ],
+  "properties": [
+    {
+      "address": "15 Jason rd,sd town,sd1 1ds",
+      "offersinregionof": 250,
+      "typeofproperty": "large house",
+      "squarefootage": 100,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "garden": "true",
+      "outbuildings": "none",
+      "freehold": "freehold",
+      "sellerid": "22",
+      "uploadimages": "none",
+      "propertystatus": "For Sale",
+      "id": 1
+    },
+    {
+      "address": "666 Devious Drive, Backally, AB66 6AB",
+      "offersinregionof": 1,
+      "typeofproperty": "Detached house",
+      "squarefootage": 1,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "garden": "true",
+      "outbuildings": "6 sheds",
+      "freehold": "Freehold",
+      "sellerid": "1",
+      "uploadimages": "no",
+      "propertystatus":"Withdrawn",
+      "id": 2
+    },
+    {
+      "address": "1 Top Coders Avenue, Best Team Town, BT1 2AW",
+      "offersinregionof": 3000000,
+      "typeofproperty": "Mansion",
+      "squarefootage": 500000,
+      "bedrooms": 52,
+      "bathrooms": 47,
+      "garden": "true",
+      "outbuildings": "Two pools",
+      "freehold": "Freehold",
+      "sellerid": "19374",
+      "uploadimages": "",
+      "propertystatus": "Sold",
+      "id": 3
+    },
+    {
+      "address": "35 New Lane, Oxford, OX34 2KS",
+      "offersinregionof": 2500000,
+      "typeofproperty": "Detatched",
+      "squarefootage": 1000,
+      "bedrooms": 6,
+      "bathrooms": 6,
+      "garden": "true",
+      "outbuildings": "Stables, 3 Sheds, Man cave",
+      "freehold": "Freehold",
+      "sellerid": "2",
+      "uploadimages": "",
+      "propertystatus": "For Sale",
+      "id": 4
+    },
+    {
+      "address": "7 Generic Grove, Gillingham, GL7 7GG",
+      "offersinregionof": 777777,
+      "typeofproperty": "flat",
+      "squarefootage": 30000,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "garden": "false",
+      "outbuildings": "No",
+      "freehold": "Leasehold",
+      "sellerid": "31",
+      "uploadimages": "",
+      "propertystatus": "For Sale",
+      "id": 5
+    },
+    {
+      "address": "65 Highfield Road, Bognor Regis, West Sussex, PO22 8PD",
+      "offersinregionof": 250000,
+      "typeofproperty": "Terraced",
+      "squarefootage": 650,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "garden": "true",
+      "outbuildings": "None",
+      "freehold": "Freehold",
+      "sellerid": "5",
+      "uploadimages": "",
+      "propertystatus": "For Sale",
+      "id": 6
+    }
+  ]
+}
