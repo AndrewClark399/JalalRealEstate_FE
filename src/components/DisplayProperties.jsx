@@ -12,6 +12,7 @@ function GetProperties() {
     const [searchBathrooms, setSearchBathrooms] = useState(0);
     const [searchGardens, setSearchGardens] = useState("");
     const [searchStatus, setSearchStatus] = useState("");
+   
 
 
 
@@ -19,6 +20,8 @@ function GetProperties() {
     useEffect(() => {
         handleClick()
     }, []);
+
+
 
     function handleClick() {
 
@@ -32,7 +35,7 @@ function GetProperties() {
 
     };
 
-
+   
     const displayProperties = [];
     //the below is to convert the json data into html so that it can be rendered on the page
 
@@ -67,6 +70,29 @@ function GetProperties() {
                             <p> {property.sellerid}</p>
                             <p> {property.uploadimages}</p>
                             <p> {property.propertystatus}</p>
+                             <input
+                    id="propertyStatusForSale"
+                    type="radio"
+                    name="PropertyStatus"
+                    value="For Sale"
+                    className="form-check-input"
+                    checked={property.propertystatus}/>
+                    
+                    <input
+                    id="propertyStatusSold"
+                    type="radio"
+                    name="PropertyStatus"
+                    value="Sold"
+                    className="form-check-input"/>
+                                    <input
+                    id="propertyStatusWithdrawn"
+                    type="radio"
+                    name="PropertyStatus"
+                    value="Withdrawn"
+                    className="form-check-input"/>
+                    
+
+                            
                         </div>
                     </div>
                 </div>
@@ -80,6 +106,7 @@ function GetProperties() {
         <>
             <div className='container'>
                 <div className='row'>
+                
                     <h1>Search by property address</h1>
                     <input value={search} onChange={e => setSearch(e.target.value)} />
                     <h1>Search for minimum number of bedrooms required</h1>
@@ -102,6 +129,7 @@ function GetProperties() {
 
                     <div>
                         {displayProperties}
+                        
                     </div>
                 </div>
             </div>
