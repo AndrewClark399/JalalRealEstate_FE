@@ -88,6 +88,7 @@
       "freehold": "freehold",
       "sellerid": "22",
       "uploadimages": "none",
+      "propertystatus": "For Sale",
       "id": 1
     },
     {
@@ -102,6 +103,7 @@
       "freehold": "Freehold",
       "sellerid": "1",
       "uploadimages": "no",
+      "propertystatus":"Withdrawn",
       "id": 2
     },
     {
@@ -116,7 +118,7 @@
       "freehold": "Freehold",
       "sellerid": "19374",
       "uploadimages": "",
-      "propertystatus": "",
+      "propertystatus": "Sold",
       "id": 3
     },
     {
@@ -131,7 +133,7 @@
       "freehold": "Freehold",
       "sellerid": "2",
       "uploadimages": "",
-      "propertystatus": "",
+      "propertystatus": "For Sale",
       "id": 4
     },
     {
