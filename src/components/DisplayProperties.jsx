@@ -12,18 +12,19 @@ function GetProperties() {
     const [searchBathrooms, setSearchBathrooms] = useState(0);
     const [searchGardens, setSearchGardens] = useState("");
     const [searchStatus, setSearchStatus] = useState("");
-   
+    const [propertystatus, setPropertyStatus] = useState("");
+
 
 
 
 
     useEffect(() => {
-        handleClick()
+        fetchProperties()
     }, []);
 
 
 
-    function handleClick() {
+    function fetchProperties() {
 
 
         axios.get("http://localhost:5000/properties")
@@ -35,7 +36,23 @@ function GetProperties() {
 
     };
 
-   
+    
+
+
+
+    function handleStatus(event, id) {
+        
+
+        axios.patch("http://localhost:5000/properties/" + id, { propertystatus:event.target.value })
+            .then(response => {
+                fetchProperties()
+                console.log(response);
+            })
+            .catch(err => console.error(err))
+
+    };
+
+
     const displayProperties = [];
     //the below is to convert the json data into html so that it can be rendered on the page
 
@@ -44,9 +61,9 @@ function GetProperties() {
         if (search && !property.address.includes(search)) continue;
         if (searchBedrooms && property.bedrooms < parseInt(searchBedrooms, 10)) continue;
         if (searchOffersInRegionOf && property.offersinregionof >= parseInt(searchOffersInRegionOf, 10)) continue;
-        if (searchBathrooms && property.bathrooms < parseInt(searchBathrooms)) continue;
-        if (searchGardens  && property.garden != searchGardens) continue;
-        if (searchStatus  && property.propertystatus != searchStatus) continue;
+        if (searchBathrooms && property.bathrooms < parseInt(searchBathrooms, 10)) continue;
+        if (searchGardens && property.garden != searchGardens) continue;
+        if (searchStatus && property.propertystatus != searchStatus) continue;
 
 
         //use a table or cards to include all of the data or else get rid of the button 
@@ -58,41 +75,29 @@ function GetProperties() {
 
                         <div className='card-text'>
 
-                            <p className='card-title '> {property.address}</p>
-                            <p> {property.offersinregionof}</p>
-                            <p> {property.typeofproperty}</p>
-                            <p> {property.squarefootage}</p>
-                            <p> {property.bedrooms}</p>
-                            <p> {property.bathrooms}</p>
-                            <p> {property.gardens}</p>
-                            <p> {property.outbuildings}</p>
-                            <p> {property.freehold}</p>
-                            <p> {property.sellerid}</p>
+                            <p className='card-title '> <b>Address:</b> {property.address}</p>
+                            <p> <b>Offers in the Region of: £</b> {property.offersinregionof}</p>
+                            <p> <b>Type of Property:</b> {property.typeofproperty}</p>
+                            <p> <b>Square Footage:</b> {property.squarefootage}</p>
+                            <p> <b>No. of Bedrooms:</b> {property.bedrooms}</p>
+                            <p> <b>No. of Bathrooms:</b>{property.bathrooms}</p>
+                            <p> <b>Gardens?:</b> {property.gardens}</p>
+                            <p> <b>Outbuildings?:</b> {property.outbuildings}</p>
+                            <p> <b>Freehold or Leasehold:</b> {property.freehold}</p>
+                            <p> <b>Seller ID:</b> {property.sellerid}</p>
                             <p> {property.uploadimages}</p>
-                            <p> {property.propertystatus}</p>
-                             <input
-                    id="propertyStatusForSale"
-                    type="radio"
-                    name="PropertyStatus"
-                    value="For Sale"
-                    className="form-check-input"
-                    checked={property.propertystatus}/>
-                    
-                    <input
-                    id="propertyStatusSold"
-                    type="radio"
-                    name="PropertyStatus"
-                    value="Sold"
-                    className="form-check-input"/>
-                                    <input
-                    id="propertyStatusWithdrawn"
-                    type="radio"
-                    name="PropertyStatus"
-                    value="Withdrawn"
-                    className="form-check-input"/>
-                    
 
-                            
+                            <label >Property Status</label>
+                            <select value={property.propertystatus} onChange={e => handleStatus(e, property.id)} name="propertystatus" >
+                                <option value="" >Status</option>
+                                <option value="For Sale">For Sale</option>
+                                <option value="Sold">Sold</option>
+                                <option value="Withdrawn">Withdrawn</option>
+
+                            </select>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -106,7 +111,7 @@ function GetProperties() {
         <>
             <div className='container'>
                 <div className='row'>
-                
+
                     <h1>Search by property address</h1>
                     <input value={search} onChange={e => setSearch(e.target.value)} />
                     <h1>Search for minimum number of bedrooms required</h1>
@@ -129,8 +134,9 @@ function GetProperties() {
 
                     <div>
                         {displayProperties}
-                        
+
                     </div>
+                    <button onChange={e => setPropertyStatus(e.target.value)}>Refresh</button>
                 </div>
             </div>
         </>

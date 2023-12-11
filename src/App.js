@@ -13,22 +13,28 @@ function App() {
   return (
 <div>
     <div className="App">
-      
+    
       <BrowserRouter>
+      
+        
+        
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        </header>
-
         <nav>
-          <Link to='/'> HOME </Link>
+          <div>
+          
+          
+
+          </div>
+          <img src={logo} className="App-logo" alt="logo" />
+          <a className= "App-nav" ><Link to='/'> HOME </Link>
           <Link to='/buyers'> BUYERS </Link>
           <Link to='/sellers'> SELLERS </Link>
           <Link to='/properties'> PROPERTIES </Link>
           <Link to='/bookings'> BOOKINGS </Link>
-          
+          </a>
 
         </nav>
-        
+        </header>
         <Routes>
 
 
@@ -48,6 +54,7 @@ function App() {
 
 
       </BrowserRouter>
+      
     </div>
     </div>
   );
