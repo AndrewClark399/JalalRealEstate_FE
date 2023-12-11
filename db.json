@@ -88,7 +88,7 @@
       "freehold": "freehold",
       "sellerid": "22",
       "uploadimages": "none",
-      "propertystatus": "For Sale",
+      "propertystatus": "Sold",
       "id": 1
     },
     {
@@ -103,7 +103,7 @@
       "freehold": "Freehold",
       "sellerid": "1",
       "uploadimages": "no",
-      "propertystatus":"Withdrawn",
+      "propertystatus": "Withdrawn",
       "id": 2
     },
     {
@@ -165,6 +165,21 @@
       "uploadimages": "",
       "propertystatus": "For Sale",
       "id": 6
+    },
+    {
+      "address": "34 High Street, London, LS1 2SF",
+      "offersinregionof": 275000,
+      "typeofproperty": "Semi-Detatched",
+      "squarefootage": 290,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "garden": "false",
+      "outbuildings": "None",
+      "freehold": "Free",
+      "sellerid": "12",
+      "uploadimages": "",
+      "propertystatus": "For Sale",
+      "id": 7
     }
   ]
 }

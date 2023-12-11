@@ -6,7 +6,7 @@ import TestIfStatements from "./TestIfStatements";
 
 function Listings() {
     return ( 
-<> 
+<div> 
 <h1>A listing is a property (no smirking)!</h1>
 <CreateProperties/>
 <br />
@@ -15,7 +15,7 @@ function Listings() {
 
 <br/>
 
-</>
+</div>
      );
 }
 
