@@ -85,7 +85,10 @@ function GetProperties() {
                             <p> <b>Outbuildings?:</b> {property.outbuildings}</p>
                             <p> <b>Freehold or Leasehold:</b> {property.freehold}</p>
                             <p> <b>Seller ID:</b> {property.sellerid}</p>
-                            <p> {property.uploadimages}</p>
+
+                            <img src={property.uploadimages}
+                            className= 'Property-images'
+                            />
 
                             <label >Property Status</label>
                             <select value={property.propertystatus} onChange={e => handleStatus(e, property.id)} name="propertystatus" >
@@ -136,7 +139,9 @@ function GetProperties() {
                         {displayProperties}
 
                     </div>
-                    <button onChange={e => setPropertyStatus(e.target.value)}>Refresh</button>
+                    <button onClick={() => alert("Quality is the JALAL way: No price is too high to pay.")}>Click Here for Discount Code</button><br />
+                    
+            
                 </div>
             </div>
         </>

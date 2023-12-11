@@ -161,7 +161,7 @@ function CreateProperties() {
             id="propertyUploadImages"
             name="uploadimages"
             className="form-control"
-            type="text"
+            type="image"
             value={uploadimages}
             onChange={e => setUploadImages(e.target.value)}
 

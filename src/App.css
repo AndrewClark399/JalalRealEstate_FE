@@ -19,7 +19,9 @@
 }
 
 
-
+.Property-images {
+  max-width: 30vmin
+}
 
 
 .App-header {

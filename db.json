@@ -42,7 +42,7 @@
       "surname": "AL",
       "tel": "07556214886",
       "email": "dontaskme@no.com",
-      "address": "11 bean grove, be1 8dg",
+      "address": "11 Bean Grove, Garden Town, 1BN 8DG",
       "id": 5
     },
     {
@@ -51,7 +51,7 @@
       "surname": "Trotter",
       "tel": "07845654444",
       "email": "pigwizzard@hogwards.com",
-      "address": "2 snort drive, hoggersville, PG1 1BT",
+      "address": "2 Snort Drive, Hoggersville, PG1 1BT",
       "id": 6
     }
   ],
@@ -71,13 +71,13 @@
       "surname": "Reject",
       "tel": "07904093171",
       "email": "whoami@universe.com",
-      "address": "Somewhere over the Rainbow Street, La La Land, LA1 2RA",
+      "address": "Somewhere Over The Rainbow Street, La La Land, LA1 2RA",
       "id": 2
     }
   ],
   "properties": [
     {
-      "address": "15 Jason rd,sd town,sd1 1ds",
+      "address": "15 Jason Road, Old Lady WHo Lived In A Shoe Town, SD1 1DS",
       "offersinregionof": 250,
       "typeofproperty": "large house",
       "squarefootage": 100,
@@ -87,7 +87,7 @@
       "outbuildings": "none",
       "freehold": "freehold",
       "sellerid": "22",
-      "uploadimages": "none",
+      "uploadimages": "https://th.bing.com/th/id/OIP.OoW5YLuINfA1-Efx_uql6gAAAA?rs=1&pid=ImgDetMain",
       "propertystatus": "Sold",
       "id": 1
     },
@@ -102,7 +102,7 @@
       "outbuildings": "6 sheds",
       "freehold": "Freehold",
       "sellerid": "1",
-      "uploadimages": "no",
+      "uploadimages": "https://th.bing.com/th/id/R.e56e3049a52d0e2df31bd77f66230972?rik=y7vPEdU3DUl33g&riu=http%3a%2f%2fhouseandhistory.com%2fwp-content%2fuploads%2f2018%2f01%2f112-Ocean-Avenue-Front.jpeg&ehk=RPOEA9u%2fH4PKJg9LoAZlqN1%2fuDOlrRTRv9V5GvrKC3Y%3d&risl=&pid=ImgRaw&r=0",
       "propertystatus": "Withdrawn",
       "id": 2
     },
@@ -117,7 +117,7 @@
       "outbuildings": "Two pools",
       "freehold": "Freehold",
       "sellerid": "19374",
-      "uploadimages": "",
+      "uploadimages": "https://media.rightmove.co.uk/239k/238904/113426084/238904_30950767_IMG_06_0000.jpeg",
       "propertystatus": "Sold",
       "id": 3
     },
@@ -132,7 +132,7 @@
       "outbuildings": "Stables, 3 Sheds, Man cave",
       "freehold": "Freehold",
       "sellerid": "2",
-      "uploadimages": "",
+      "uploadimages": "https://th.bing.com/th/id/R.e56e3049a52d0e2df31bd77f66230972?rik=y7vPEdU3DUl33g&riu=http%3a%2f%2fhouseandhistory.com%2fwp-content%2fuploads%2f2018%2f01%2f112-Ocean-Avenue-Front.jpeg",
       "propertystatus": "For Sale",
       "id": 4
     },
@@ -147,7 +147,7 @@
       "outbuildings": "No",
       "freehold": "Leasehold",
       "sellerid": "31",
-      "uploadimages": "",
+      "uploadimages": "https://th.bing.com/th/id/R.5eb7885ba08df665ae613188a5f4a659?rik=7zc9%2fwORHL6Lzw&riu=http%3a%2f%2f3.bp.blogspot.com%2f-ScEiB9F6Okg%2fUJ0uHR6QY7I%2fAAAAAAAAKXU%2fcX_Q2RGVD8w%2fs1600%2fSpirit_Lake_Modern_Hillside_Home_by_James_D_LaRue_Architects_Westlake_%2bTexas_world_of_architecture_worldofarchi_01.jpg&ehk=ozr6Ms63Ti91Awn8tqZ5ER97Xc632NkOv55ibvpFXMI%3d&risl=&pid=ImgRaw&r=0",
       "propertystatus": "For Sale",
       "id": 5
     },
@@ -162,7 +162,7 @@
       "outbuildings": "None",
       "freehold": "Freehold",
       "sellerid": "5",
-      "uploadimages": "",
+      "uploadimages": "https://images.stockfreeimages.com/3225/sfixl/32259479.jpg",
       "propertystatus": "For Sale",
       "id": 6
     },
@@ -177,9 +177,24 @@
       "outbuildings": "None",
       "freehold": "Free",
       "sellerid": "12",
-      "uploadimages": "",
+      "uploadimages": "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg",
       "propertystatus": "For Sale",
       "id": 7
+    },
+    {
+      "address": "1 Do Not Be Whammed, December Challenge, DE12 4WH",
+      "offersinregionof": 400000,
+      "typeofproperty": "Semi-Detached",
+      "squarefootage": 500,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "garden": "true",
+      "outbuildings": "1 Ramshackle Shed",
+      "freehold": "Leasehold",
+      "sellerid": "3248973427",
+      "uploadimages": "https://media.rightmove.co.uk/41k/40925/86355405/40925_WOB230869_IMG_02_0000.jpeg",
+      "propertystatus": "For Sale",
+      "id": 8
     }
   ]
 }
