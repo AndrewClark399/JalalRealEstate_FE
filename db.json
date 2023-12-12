@@ -196,5 +196,14 @@
       "propertystatus": "For Sale",
       "id": 8
     }
+  ],
+  "bookings": [
+    {
+      "date": "",
+      "time": "",
+      "property": "",
+      "id": 1
+
+    }
   ]
 }
