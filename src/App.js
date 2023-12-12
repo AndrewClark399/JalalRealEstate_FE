@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Buyers from './components/Buyers';
 import Sellers from './components/Sellers';
 import Listings from './components/Listings';
-import Bookings from './components/Bookings';
+import Bookings from './components/Bookings/Bookings';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -42,6 +42,7 @@ function App() {
           <Route path='/sellers' element={<Sellers />} />
           <Route path='/properties' element={<Listings />} />
           <Route path='/bookings' element={<Bookings />} />
+          
 
 
 
