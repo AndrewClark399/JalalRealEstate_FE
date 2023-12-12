@@ -7,13 +7,13 @@ function CreateBookings() {
  
   return (  
     <form onSubmit={e => {e.preventDefault();
-    axios.post("https://localhost:5000/bookings",{date,time,property})
+    axios.post("http://localhost:5000/bookings",{date,time,property})
     .then(response => {setDate(""); setTime(""); setProperty("");})
     .catch(err => console.log (err))
   }}
  >
 <label htmlFor="bookingDate"className="form-label">Date</label>
-<input id="bookingDate"
+<input id="bookingsDate"
 name="date"
 className="form-control"
 type="date"
@@ -21,7 +21,7 @@ value={date}
 onChange={e => setDate(e.target.value)}/>
 
 <label htmlFor="bookingTime"className="form-label">Time</label>
-<input id="bookingTime"
+<input id="bookingsTime"
 name="time"
 className="form-control"
 type="time"
@@ -29,7 +29,7 @@ value={time}
 onChange={e => setTime(e.target.value)}/>
 
 <label htmlFor="bookingProperty"className="form-label">Property</label>
-<input id="bookingProperty"
+<input id="bookingsProperty"
 name="property"
 className="form-control"
 type="text"
