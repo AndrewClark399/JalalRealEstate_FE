@@ -36,14 +36,14 @@ function GetProperties() {
 
     };
 
-    
+
 
 
 
     function handleStatus(event, id) {
-        
 
-        axios.patch("http://localhost:5000/properties/" + id, { propertystatus:event.target.value })
+
+        axios.patch("http://localhost:5000/properties/" + id, { propertystatus: event.target.value })
             .then(response => {
                 fetchProperties()
                 console.log(response);
@@ -69,42 +69,49 @@ function GetProperties() {
         //use a table or cards to include all of the data or else get rid of the button 
 
         displayProperties.push(
-            <div className='col-4'>
-                <div className='card'>
-                    <div className='card-body'>
 
-                        <div className='card-text'>
 
-                            <p className='card-title '> <b>Address:</b> {property.address}</p>
-                            <p> <b>Offers in the Region of: £</b> {property.offersinregionof}</p>
-                            <p> <b>Type of Property:</b> {property.typeofproperty}</p>
-                            <p> <b>Square Footage:</b> {property.squarefootage}</p>
-                            <p> <b>No. of Bedrooms:</b> {property.bedrooms}</p>
-                            <p> <b>No. of Bathrooms:</b>{property.bathrooms}</p>
-                            <p> <b>Gardens?:</b> {property.gardens}</p>
-                            <p> <b>Outbuildings?:</b> {property.outbuildings}</p>
-                            <p> <b>Freehold or Leasehold:</b> {property.freehold}</p>
-                            <p> <b>Seller ID:</b> {property.sellerid}</p>
-
-                            <img src={property.uploadimages}
-                            className= 'Property-images'
-                            />
-
-                            <label >Property Status</label>
-                            <select value={property.propertystatus} onChange={e => handleStatus(e, property.id)} name="propertystatus" >
-                                <option value="" >Status</option>
-                                <option value="For Sale">For Sale</option>
-                                <option value="Sold">Sold</option>
-                                <option value="Withdrawn">Withdrawn</option>
-
-                            </select>
+            <div className="container">
+                 <div className="row">
+                <div className='col-5'>
 
 
 
+                    <div className='card'>
+                        <div className='card-body'>
+
+                            <div className='card-text'>
+
+                                <p className='card-title '> <b>Address:</b> {property.address}</p>
+                                <p> <b>Offers in the Region of: £</b> {property.offersinregionof}</p>
+                                <p> <b>Type of Property:</b> {property.typeofproperty}</p>
+                                <p> <b>Square Footage:</b> {property.squarefootage}</p>
+                                <p> <b>No. of Bedrooms:</b> {property.bedrooms}</p>
+                                <p> <b>No. of Bathrooms:</b>{property.bathrooms}</p>
+                                <p> <b>Gardens?:</b> {property.gardens}</p>
+                                <p> <b>Outbuildings?:</b> {property.outbuildings}</p>
+                                <p> <b>Freehold or Leasehold:</b> {property.freehold}</p>
+                                <p> <b>Seller ID:</b> {property.sellerid}</p>
+
+                                <img src={property.uploadimages}
+                                    className='Property-images'
+                                />
+
+                                <label >Property Status</label>
+                                <select value={property.propertystatus} onChange={e => handleStatus(e, property.id)} name="propertystatus" >
+                                    <option value="" >Status</option>
+                                    <option value="For Sale">For Sale</option>
+                                    <option value="Sold">Sold</option>
+                                    <option value="Withdrawn">Withdrawn</option>
+
+                                </select>
+
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+            </div>
             </div>
 
         )
@@ -140,8 +147,8 @@ function GetProperties() {
 
                     </div>
                     <button onClick={() => alert("Quality is the JALAL way: No price is too high to pay.")}>Click Here for Discount Code</button><br />
-                    
-            
+
+
                 </div>
             </div>
         </>

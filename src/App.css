@@ -16,6 +16,11 @@
   
   
   pointer-events: none;
+
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -23,6 +28,17 @@
   max-width: 30vmin
 }
 
+.properties-container {
+  width: 65%;
+}
+
+
+
+
+.flex-container {
+  display: flex;
+
+}
 
 .App-header {
   background-color: #000000;
@@ -45,4 +61,58 @@
   text-align: center;
 }
 
+
+.HomePage {
+
+  
+  background-color: #2e2e2e;
+ 
+}
+
+.homeHeading {
+
+  
+ 
+  color: #fbfbfa;
+  text-align: center;
+  
+ 
+}
+
+.valueList{
+
+  
+  background-color: #0d0c01;
+  color: #fbfbfa;
+}
+
+.value1 {
+
+  
+    background-color: #f9e637;
+}
+
+.value2 {
+
+  
+  background-color: #fe25fa;
+}
+
+.value3 {
+
+  
+  background-color: #7272ef;
+}
+
+.value4 {
+
+  
+  background-color: #37f94e;
+}
+
+.value5 {
+
+  
+  background-color: #fa3f11;
+}
 
