@@ -57,8 +57,9 @@
   color: #61dafb;
 }
 
-#App-nav{
+.App-nav{
   text-align: center;
+  display: inline
 }
 
 

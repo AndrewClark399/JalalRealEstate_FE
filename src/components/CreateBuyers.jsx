@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function CreateBuyers() {
@@ -11,20 +11,52 @@ function CreateBuyers() {
     const [address, setAddress] = useState("");
     
 
-    return (<fieldset><form onSubmit={e => {
-        e.preventDefault();
-        axios.post("http://localhost:5000/buyers", { title, firstName, surname, tel, email, address })
-            .then(response => {
-                console.log(response);
-                setTitle("");
-                setFirstName("");
-                setSurname("");
-                setTel("");
-                setEmail("");
-                setAddress("");
-            })
-            .catch(err => console.error(err))
-    }}>
+
+
+ return (<fieldset><form onSubmit={
+
+        e => {
+            e.preventDefault();
+
+            axios.get("http://localhost:5000/buyers").then(response => {
+                const existingBuyers = response.data;
+                const exists = existingBuyers.some(buyer => {
+                    return buyer.firstName === firstName && buyer.surname === surname;
+                });
+
+                if (!exists) {
+                    axios.post("http://localhost:5000/buyers", {
+                        title,
+                        firstName,
+                        surname,
+                        tel,
+                        email,
+                        address
+                    })
+                        .then(() => { 
+
+                            console.log("Buyer added successfully");
+                            setTitle("");
+                            setFirstName("");
+                            setSurname("");
+                            setTel("");
+                            setEmail("");
+                            setAddress("");
+
+                        })
+                        .catch(err => console.error(err));
+
+                } else {
+                    console.log("Buyer with the same name already exists.");
+                    alert("Buyer with the same name already exists")
+                }
+            }).catch(err => console.error(err));
+        }}>
+
+
+
+
+
         <label htmlFor="buyerTitle" className="form-label">Title</label>
         <input
             id="buyerTitle"
@@ -85,7 +117,7 @@ function CreateBuyers() {
             onChange={e => setAddress(e.target.value)}
             required
         />
-        
+
         <div className="mt-2">
             <button className="btn btn-success" type="submit">Submit</button>
         </div>

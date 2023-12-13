@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import { useState, useEffect } from "react";
-import {useNavigate, params} from "react-router-dom";
+import { useNavigate, params } from "react-router-dom";
 
 
 function GetProperties() {
@@ -73,18 +73,17 @@ function GetProperties() {
         displayProperties.push(
 
 
-            <div className="container">
-                 <div className="row">
-                <div className='col-5'>
+
+            <div className='col-5'>
 
 
 
-                    <div className='card'>
-                        <div className='card-body'>
+                <div className='card'>
+                    <div className='card-body'>
 
-                            <div className='card-text'>
+                        <div className='card-text'>
 
-                                <p className='card-title '> 
+                            <p className='card-title '>
                                 <p><b>Address:</b> {property.address}</p>
                                 <p> <b>Offers in the Region of: £</b> {property.offersinregionof}</p>
                                 <p> <b>Type of Property:</b> {property.typeofproperty}</p>
@@ -96,29 +95,28 @@ function GetProperties() {
                                 <p> <b>Freehold or Leasehold:</b> {property.freehold}</p>
                                 <p> <b>Seller ID:</b> {property.sellerid}</p>
                                 <p><button onClick={() => navigate("/properties/bookings/" + property.id)}
-                                
+
                                 >Book a viewing</button></p>
 
                                 <img src={property.uploadimages}
                                     className='Property-images'
                                 />
-                                </p>
+                            </p>
 
-                                <label >Property Status</label>
-                                <select value={property.propertystatus} onChange={e => handleStatus(e, property.id)} name="propertystatus" >
-                                    <option value="" >Status</option>
-                                    <option value="For Sale">For Sale</option>
-                                    <option value="Sold">Sold</option>
-                                    <option value="Withdrawn">Withdrawn</option>
+                            <label >Property Status</label>
+                            <select value={property.propertystatus} onChange={e => handleStatus(e, property.id)} name="propertystatus" >
+                                <option value="" >Status</option>
+                                <option value="For Sale">For Sale</option>
+                                <option value="Sold">Sold</option>
+                                <option value="Withdrawn">Withdrawn</option>
 
-                                </select>
+                            </select>
 
-                            </div>
                         </div>
-                    </div>
 
+
+                    </div>
                 </div>
-            </div>
             </div>
 
         )
@@ -126,34 +124,34 @@ function GetProperties() {
 
     return (
         <>
-            
 
-                    <h5>Search by property address</h5>
-                    <input value={search} onChange={e => setSearch(e.target.value)} />
-                    <h5>Search for minimum number of bedrooms required</h5>
-                    {searchBedrooms} <input type="range" min="1" max="55" value={searchBedrooms} onChange={e => setSearchBedrooms(e.target.value)} />
-                    <h5>Search for maximum price</h5>
-                    {searchOffersInRegionOf} <input type="range" min="0" max="3000000" value={searchOffersInRegionOf} onChange={e => setSearchOffersInRegionOf(e.target.value)} />
-                    <h5>Search for bathrooms if any</h5>
-                    {searchBathrooms} <input type="range" min="1" max="47" value={searchBathrooms} onChange={e => setSearchBathrooms(e.target.value)} />
-                    <h5>Garden?</h5>
-                    <div>
-                        Yes <input checked={searchGardens === "true"} type="radio" value={"true"} onChange={e => setSearchGardens("true")} />
-                        No<input checked={searchGardens === "false"} type="radio" value={"false"} onChange={e => setSearchGardens("false")} />
-                    </div>
 
-                    <div>
-                        For Sale <input checked={searchStatus === "For Sale"} type="radio" value={"For Sale"} onChange={e => setSearchStatus("For Sale")} />
-                        Sold <input checked={searchStatus === "Sold"} type="radio" value={"Sold"} onChange={e => setSearchStatus("Sold")} />
-                        Withdrawn <input checked={searchStatus === "Withdrawn"} type="radio" value={"Withdrawn"} onChange={e => setSearchStatus("Withdrawn")} />
-                    </div>
-                    <div className='container'>
+            <h5>Search by property address</h5>
+            <input value={search} onChange={e => setSearch(e.target.value)} />
+            <h5>Search for minimum number of bedrooms required</h5>
+            {searchBedrooms} <input type="range" min="1" max="55" value={searchBedrooms} onChange={e => setSearchBedrooms(e.target.value)} />
+            <h5>Search for maximum price</h5>
+            {searchOffersInRegionOf} <input type="range" min="0" max="3000000" value={searchOffersInRegionOf} onChange={e => setSearchOffersInRegionOf(e.target.value)} />
+            <h5>Search for bathrooms if any</h5>
+            {searchBathrooms} <input type="range" min="1" max="47" value={searchBathrooms} onChange={e => setSearchBathrooms(e.target.value)} />
+            <h5>Garden?</h5>
+            <div>
+                Yes <input checked={searchGardens === "true"} type="radio" value={"true"} onChange={e => setSearchGardens("true")} />
+                No<input checked={searchGardens === "false"} type="radio" value={"false"} onChange={e => setSearchGardens("false")} />
+            </div>
+
+            <div>
+                For Sale <input checked={searchStatus === "For Sale"} type="radio" value={"For Sale"} onChange={e => setSearchStatus("For Sale")} />
+                Sold <input checked={searchStatus === "Sold"} type="radio" value={"Sold"} onChange={e => setSearchStatus("Sold")} />
+                Withdrawn <input checked={searchStatus === "Withdrawn"} type="radio" value={"Withdrawn"} onChange={e => setSearchStatus("Withdrawn")} />
+            </div>
+            <div className='container'>
                 <div className='row'>
-                    <div>
+                    
                         {displayProperties}
 
-                    </div>
                     
+
 
 
                 </div>
