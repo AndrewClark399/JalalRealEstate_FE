@@ -1,14 +1,24 @@
-import {useState}from "react"; 
+import {useState, useEffect}from "react"; 
 import axios from "axios";
+ import {useParams} from "react-router-dom";
+
 function CreateBookings() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [property, setProperty] = useState("");
+  
+   const params = useParams();
+
+  useEffect(() => {
+    axios.get("http://localhost:5000/properties/" +params.id) 
+    .then(res => {
+       
+    }).catch(err => console.error(err));
+}, []);
  
   return (  
     <form onSubmit={e => {e.preventDefault();
-    axios.post("http://localhost:5000/bookings",{date,time,property})
-    .then(response => {setDate(""); setTime(""); setProperty("");})
+    axios.post("http://localhost:5000/bookings",{date,time,property:params.id})
+    .then(res => {setDate(""); setTime("");})
     .catch(err => console.log (err))
   }}
  >
@@ -26,15 +36,13 @@ name="time"
 className="form-control"
 type="time"
 value={time}
+min = "09:00"
+max = "16:00"
+step = "3600"
 onChange={e => setTime(e.target.value)}/>
 
-<label htmlFor="bookingProperty"className="form-label">Property</label>
-<input id="bookingsProperty"
-name="property"
-className="form-control"
-type="text"
-value={property}
-onChange={e => setProperty(e.target.value)}/>
+
+<br />
 <>
  <button className="btn btn-danger" type="submit">Confirm Booking</button>
  </>

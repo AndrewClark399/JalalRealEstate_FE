@@ -1,6 +1,7 @@
 
 import axios from "axios";
 import { useState, useEffect } from "react";
+import {useNavigate, params} from "react-router-dom";
 
 
 function GetProperties() {
@@ -13,6 +14,7 @@ function GetProperties() {
     const [searchGardens, setSearchGardens] = useState("");
     const [searchStatus, setSearchStatus] = useState("");
     const [propertystatus, setPropertyStatus] = useState("");
+    const navigate = useNavigate();
 
 
 
@@ -82,7 +84,8 @@ function GetProperties() {
 
                             <div className='card-text'>
 
-                                <p className='card-title '> <b>Address:</b> {property.address}</p>
+                                <p className='card-title '> 
+                                <p><b>Address:</b> {property.address}</p>
                                 <p> <b>Offers in the Region of: £</b> {property.offersinregionof}</p>
                                 <p> <b>Type of Property:</b> {property.typeofproperty}</p>
                                 <p> <b>Square Footage:</b> {property.squarefootage}</p>
@@ -92,10 +95,14 @@ function GetProperties() {
                                 <p> <b>Outbuildings?:</b> {property.outbuildings}</p>
                                 <p> <b>Freehold or Leasehold:</b> {property.freehold}</p>
                                 <p> <b>Seller ID:</b> {property.sellerid}</p>
+                                <p><button onClick={() => navigate("/properties/bookings/" + property.id)}
+                                
+                                >Book a viewing</button></p>
 
                                 <img src={property.uploadimages}
                                     className='Property-images'
                                 />
+                                </p>
 
                                 <label >Property Status</label>
                                 <select value={property.propertystatus} onChange={e => handleStatus(e, property.id)} name="propertystatus" >
@@ -119,18 +126,17 @@ function GetProperties() {
 
     return (
         <>
-            <div className='container'>
-                <div className='row'>
+            
 
-                    <h1>Search by property address</h1>
+                    <h5>Search by property address</h5>
                     <input value={search} onChange={e => setSearch(e.target.value)} />
-                    <h1>Search for minimum number of bedrooms required</h1>
+                    <h5>Search for minimum number of bedrooms required</h5>
                     {searchBedrooms} <input type="range" min="1" max="55" value={searchBedrooms} onChange={e => setSearchBedrooms(e.target.value)} />
-                    <h1>Search for maximum price</h1>
+                    <h5>Search for maximum price</h5>
                     {searchOffersInRegionOf} <input type="range" min="0" max="3000000" value={searchOffersInRegionOf} onChange={e => setSearchOffersInRegionOf(e.target.value)} />
-                    <h2>Search for bathrooms if any</h2>
+                    <h5>Search for bathrooms if any</h5>
                     {searchBathrooms} <input type="range" min="1" max="47" value={searchBathrooms} onChange={e => setSearchBathrooms(e.target.value)} />
-                    <h1>Garden?</h1>
+                    <h5>Garden?</h5>
                     <div>
                         Yes <input checked={searchGardens === "true"} type="radio" value={"true"} onChange={e => setSearchGardens("true")} />
                         No<input checked={searchGardens === "false"} type="radio" value={"false"} onChange={e => setSearchGardens("false")} />
@@ -141,16 +147,18 @@ function GetProperties() {
                         Sold <input checked={searchStatus === "Sold"} type="radio" value={"Sold"} onChange={e => setSearchStatus("Sold")} />
                         Withdrawn <input checked={searchStatus === "Withdrawn"} type="radio" value={"Withdrawn"} onChange={e => setSearchStatus("Withdrawn")} />
                     </div>
-
+                    <div className='container'>
+                <div className='row'>
                     <div>
                         {displayProperties}
 
                     </div>
-                    <button onClick={() => alert("Quality is the JALAL way: No price is too high to pay.")}>Click Here for Discount Code</button><br />
+                    
 
 
                 </div>
             </div>
+            <button onClick={() => alert("Quality is the JALAL way: No price is too high to pay.")}>Click Here for Discount Code</button><br />
         </>
     );
 }

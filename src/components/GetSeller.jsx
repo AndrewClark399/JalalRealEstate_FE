@@ -38,12 +38,12 @@ function GetSeller() {
 
                             <div className='card-text'>
 
-                                <p className='card-title '> {seller.title}</p>
-                                <p> {seller.firstName}</p>
-                                <p> {seller.surname}</p>
-                                <p> {seller.tel}</p>
-                                <p> {seller.email}</p>
-                                <p> {seller.address}</p>
+                                <p className='card-title '><b>Title:</b> {seller.title}</p>
+                                <p><b>First Name:</b> {seller.firstName}</p>
+                                <p><b>Surname:</b> {seller.surname}</p>
+                                <p><b>Tel:</b> {seller.tel}</p>
+                                <p><b>Email:</b> {seller.email}</p>
+                                <p><b>Address:</b> {seller.address}</p>
 
                             </div>
                         </div>
@@ -58,10 +58,12 @@ function GetSeller() {
 
     return (
         <>
+        <br />
+        <button onClick={handleClick}>Display all Sellers</button>
             <div className='container'>
                 <div className='row'>
 
-                <button onClick={handleClick}>Display all Sellers</button>
+                
                     {displaySellers}
                 </div>
             </div>

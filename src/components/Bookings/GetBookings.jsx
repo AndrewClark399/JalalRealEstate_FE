@@ -23,9 +23,17 @@ function GetBookings() {
     return (
         <div>
 
-            <div>
+            <table className ="table table-striped">
+            <thead><tr >
+            <td>Booking Date:</td>
+            <td>Time: </td>
+            <td>Property id:</td>
+            </tr>
+            </thead>
+            <tbody>
                 {displayBookings}
-            </div>
+                </tbody>
+            </table>
         </div>
     );
 }
