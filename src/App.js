@@ -26,12 +26,12 @@ function App() {
 
           </div>
           <img src={logo} className="App-logo" alt="logo" />
-          <a className= "App-nav" ><Link to='/'> HOME </Link>
+          <div className= "App-nav" ><Link to='/'> HOME </Link>
           <Link to='/buyers'> BUYERS </Link>
           <Link to='/sellers'> SELLERS </Link>
           <Link to='/properties'> PROPERTIES </Link>
           <Link to='/bookings'> BOOKINGS </Link>
-          </a>
+          </div>
 
         </nav>
         </header>
