@@ -6,7 +6,7 @@ import TestIfStatements from "./TestIfStatements";
 
 function Listings() {
     return ( 
-<div> 
+<div className = "MainPages"> 
 <h1>A listing is a property (no smirking)!</h1>
 <CreateProperties/>
 <br />

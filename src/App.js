@@ -7,6 +7,7 @@ import Sellers from './components/Sellers';
 import Listings from './components/Listings';
 import Bookings from './components/Bookings/Bookings';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CreateBookings from './components/Bookings/CreateBookings';
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
           <Route path='/sellers' element={<Sellers />} />
           <Route path='/properties' element={<Listings />} />
           <Route path='/bookings' element={<Bookings />} />
-          
+          <Route path='/properties/bookings/:id' element={<CreateBookings />} />
 
 
 

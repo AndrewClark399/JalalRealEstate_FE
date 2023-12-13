@@ -3,7 +3,7 @@ import GetBuyer from "./GetBuyer";
 
 function Buyers() {
     return ( 
-<div>
+<div className = "MainPages">
 <h1>Jalal is the place to buy!</h1>
 
 <CreateBuyers/>

@@ -36,12 +36,12 @@ function GetBuyer() {
 
                         <div className='card-text'>
 
-                            <p className='card-title '> {buyer.title}</p>
-                            <p> {buyer.firstName}</p>
-                            <p> {buyer.surname}</p>
-                            <p> {buyer.tel}</p>
-                            <p> {buyer.email}</p>
-                            <p> {buyer.address}</p>
+                            <p className='card-title '> <b>Title:</b> {buyer.title}</p>
+                            <p><b>First Name:</b> {buyer.firstName}</p>
+                            <p><b>Surname:</b> {buyer.surname}</p>
+                            <p><b>Tel:</b> {buyer.tel}</p>
+                            <p><b>Email:</b> {buyer.email}</p>
+                            <p><b>Address:</b> {buyer.address}</p>
 
                         </div>
                     </div>
@@ -56,10 +56,12 @@ function GetBuyer() {
 
     return (
         <>
+        <br />
+            <button onClick={handleClick}>Display all Buyers</button>
             <div className='container'>
                 <div className='row'>
-                <button onClick={handleClick}>Display all Buyers</button>
-                    <p>{displayBuyers}</p>
+                
+                    {displayBuyers}
                 </div>
             </div>
         </>

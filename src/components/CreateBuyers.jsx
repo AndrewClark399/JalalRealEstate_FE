@@ -11,7 +11,7 @@ function CreateBuyers() {
     const [address, setAddress] = useState("");
     
 
-    return (<form onSubmit={e => {
+    return (<fieldset><form onSubmit={e => {
         e.preventDefault();
         axios.post("http://localhost:5000/buyers", { title, firstName, surname, tel, email, address })
             .then(response => {
@@ -89,7 +89,7 @@ function CreateBuyers() {
         <div className="mt-2">
             <button className="btn btn-success" type="submit">Submit</button>
         </div>
-    </form>);
+    </form></fieldset>);
 }
 
 export default CreateBuyers;
