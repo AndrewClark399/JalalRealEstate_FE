@@ -3,7 +3,7 @@ import logo from "./image-20231114-143925-5507bda3.jpeg"
 function Home() {
     return ( 
 <div className = "HomePage">
-<h1 className = "homeHeading">JALAL is Where the Home is!</h1>
+<h1 className = "homeHeading">JALAL is Where the Home is!?</h1>
 <img src={logo} className="App-logo2" alt="logo" />
 
 <>
