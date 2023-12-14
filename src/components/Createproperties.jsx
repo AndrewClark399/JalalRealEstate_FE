@@ -18,7 +18,7 @@ function CreateProperties() {
 
 
 
-    return (<form onSubmit={e => {
+    return (<form className = "form" onSubmit={e => {
         e.preventDefault();
         axios.post("http://localhost:5000/properties", { address, offersinregionof: parseInt(offersinregionof), typeofproperty, squarefootage: parseInt(squarefootage), bedrooms: parseInt(bedrooms), bathrooms: parseInt(bathrooms), garden, outbuildings, freehold, sellerid, uploadimages, propertystatus })
             .then(response => {
@@ -207,7 +207,7 @@ function CreateProperties() {
         </div>
 
      
-
+<br />
         <div className="mt-2">
             <button className="btn btn-success" type="submit">Submit</button>
         </div>

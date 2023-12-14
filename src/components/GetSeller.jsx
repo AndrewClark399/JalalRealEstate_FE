@@ -59,11 +59,12 @@ function GetSeller() {
     return (
         <>
         <br />
-        <button onClick={handleClick}>Display all Sellers</button>
+        <button class="btn btn-light btn-lg" onClick={handleClick}>Display all Sellers</button>
+            <br />
             <div className='container'>
                 <div className='row'>
 
-                
+                <br />
                     {displaySellers}
                 </div>
             </div>

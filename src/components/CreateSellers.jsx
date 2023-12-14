@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 
+
 function CreateSellers() {
     const [title, setTitle] = useState("");
     const [firstName, setFirstName] = useState("");
@@ -11,7 +12,7 @@ function CreateSellers() {
     const [address, setAddress] = useState("");
 
 
-    return (<fieldset> <form onSubmit={e => {
+    return (<fieldset> <form className = "form" onSubmit={e => {
         e.preventDefault();
 
         axios.get("http://localhost:5000/sellers").then(response => {
@@ -100,6 +101,8 @@ function CreateSellers() {
             onChange={e => setAddress(e.target.value)}
             required
         />
+        <br />
+        
 
         <div className="mt-2">
             <button className="btn btn-success" type="submit">Submit</button>
