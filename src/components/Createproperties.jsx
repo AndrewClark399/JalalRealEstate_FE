@@ -107,7 +107,7 @@ function CreateProperties() {
                     id="propertyGardenYes"
                     type="radio"
                     name="Garden"
-                    value="true"
+                    value="Yes"
                     className="form-check-input"
                     checked={garden}
                     onChange={e => setGarden(e.target.value)}
@@ -119,7 +119,7 @@ function CreateProperties() {
                     id="propertyGardenNo"
                     type="radio"
                     name="Garden"
-                    value="false"
+                    value="No"
                     className="form-check-input"
                     onChange={e => setGarden(e.target.value)}
                 />
