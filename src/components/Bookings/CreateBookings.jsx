@@ -17,11 +17,36 @@ function CreateBookings() {
  
   return (  
     <form onSubmit={e => {e.preventDefault();
-    axios.post("http://localhost:5000/bookings",{date,time,property:params.id})
+
+axios.get("http://localhost:5000/bookings").then(response => {
+
+const existingBookings = response.data;
+const exists = existingBookings.some (booking => {
+  return booking.date === date && booking.time === time;
+
+
+
+});
+
+if (!exists) {
+    axios.post("http://localhost:5000/bookings",{
+      date,time,property:params.id
+    })
     .then(res => {setDate(""); setTime("");})
-    .catch(err => console.log (err))
-  }}
+    .catch(err => console.log (err));
+
+
+
+  }else { alert ("Booking already exists")
+}
+
+
+    }) .catch(err => console.log (err))}}
+
+
  >
+
+
 <label htmlFor="bookingDate"className="form-label">Date</label>
 <input id="bookingsDate"
 name="date"
