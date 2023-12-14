@@ -151,3 +151,18 @@
   border-color: #fa3f11;
   color: white
 }
+
+.card {
+  margin:4%;
+}
+
+.form {
+  margin:4%;
+  margin-right: 35%;
+  margin-left: 35%;
+}
+
+.form-sub {
+  margin-left: 5% ;
+  margin-right: 35%;
+}

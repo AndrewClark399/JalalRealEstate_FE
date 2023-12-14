@@ -7,7 +7,7 @@ function Bookings () {
     <h1>Jalal is the place to make bookings to see all the best properties!</h1> 
     
     <br />
-    <h5>Current Bookings:</h5>
+    <h3><u>Current Bookings:</u></h3>
     <GetBookings/>
     </div>
     );

@@ -40,10 +40,10 @@ function GetBookings() {
 
             <table className ="table table-striped">
             <thead><tr >
-            <td>Booking Date:</td>
-            <td>Time: </td>
-            <td>Property id:</td>
-            <td>Cancel Booking</td>
+            <td><b>Booking Date:</b></td>
+            <td><b>Time: </b></td>
+            <td><b>Property id:</b></td>
+            <td><b>Cancel Booking</b></td>
             </tr>
             </thead>
             <tbody>
