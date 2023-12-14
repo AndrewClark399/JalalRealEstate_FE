@@ -62,7 +62,7 @@ function GetProperties() {
 
         if (search && !property.address.includes(search)) continue;
         if (searchBedrooms && property.bedrooms < parseInt(searchBedrooms, 10)) continue;
-        if (searchOffersInRegionOf && property.offersinregionof >= parseInt(searchOffersInRegionOf, 10)) continue;
+        if (searchOffersInRegionOf && property.offersinregionof > parseInt(searchOffersInRegionOf, 10)) continue;
         if (searchBathrooms && property.bathrooms < parseInt(searchBathrooms, 10)) continue;
         if (searchGardens && property.garden != searchGardens) continue;
         if (searchStatus && property.propertystatus != searchStatus) continue;
@@ -90,7 +90,7 @@ function GetProperties() {
                                 <p> <b>Square Footage:</b> {property.squarefootage}</p>
                                 <p> <b>No. of Bedrooms:</b> {property.bedrooms}</p>
                                 <p> <b>No. of Bathrooms:</b>{property.bathrooms}</p>
-                                <p> <b>Gardens?:</b> {property.gardens}</p>
+                                <p> <b>Gardens?:</b> {property.garden}</p>
                                 <p> <b>Outbuildings?:</b> {property.outbuildings}</p>
                                 <p> <b>Freehold or Leasehold:</b> {property.freehold}</p>
                                 <p> <b>Seller ID:</b> {property.sellerid}</p>
