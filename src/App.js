@@ -5,30 +5,36 @@ import Home from './components/Home';
 import Buyers from './components/Buyers';
 import Sellers from './components/Sellers';
 import Listings from './components/Listings';
-import Bookings from './components/Bookings';
+import Bookings from './components/Bookings/Bookings';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CreateBookings from './components/Bookings/CreateBookings';
 
 
 function App() {
   return (
 <div>
     <div className="App">
-      
+    
       <BrowserRouter>
+      
+        
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        </header>
-
         <nav>
-          <Link to='/'> HOME </Link>
+          <div>
+          
+          
+
+          </div>
+          <img src={logo} className="App-logo" alt="logo" />
+          <div className= "App-nav" ><Link to='/'> HOME </Link>
           <Link to='/buyers'> BUYERS </Link>
           <Link to='/sellers'> SELLERS </Link>
           <Link to='/properties'> PROPERTIES </Link>
           <Link to='/bookings'> BOOKINGS </Link>
-          
+          </div>
 
         </nav>
-        
+        </header>
         <Routes>
 
 
@@ -37,6 +43,7 @@ function App() {
           <Route path='/sellers' element={<Sellers />} />
           <Route path='/properties' element={<Listings />} />
           <Route path='/bookings' element={<Bookings />} />
+          <Route path='/properties/bookings/:id' element={<CreateBookings />} />
 
 
 
@@ -48,6 +55,7 @@ function App() {
 
 
       </BrowserRouter>
+      
     </div>
     </div>
   );

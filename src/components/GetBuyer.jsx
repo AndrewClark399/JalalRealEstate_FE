@@ -30,18 +30,33 @@ function GetBuyer() {
         //use a table or cards to include all of the data or else get rid of the button 
 
         displayBuyers.push(
-            <div className='col-4'>
+            <div className='col-4'  key = {buyer.id} >
                 <div className='card'>
                     <div className='card-body'>
 
                         <div className='card-text'>
 
-                            <p className='card-title '> {buyer.title}</p>
-                            <p> {buyer.firstName}</p>
-                            <p> {buyer.surname}</p>
-                            <p> {buyer.tel}</p>
-                            <p> {buyer.email}</p>
-                            <p> {buyer.address}</p>
+                            <p className='card-title '> <b>Title:</b> {buyer.title}</p>
+                            <p><b>First Name:</b> {buyer.firstName}</p>
+                            <p><b>Surname:</b> {buyer.surname}</p>
+                            <p><b>Tel:</b> {buyer.tel}</p>
+                            <p><b>Email:</b> {buyer.email}</p>
+                            <p><b>Address:</b> {buyer.address}</p>
+                            <p><button type="button" onClick={() => {
+                        axios.delete("http://localhost:5000/buyers/" + buyer.id)
+                            .then(res => {
+
+
+                                axios.get("http://localhost:5000/buyers")
+                                    .then(response => {
+                                        setBuyers(response.data)
+                                        console.log(response);
+                                    })
+                                    .catch(err => console.error(err))
+                        
+                            })
+                            .catch(err => console.error(err));
+                    }}>DELETE</button></p>
 
                         </div>
                     </div>
@@ -56,10 +71,12 @@ function GetBuyer() {
 
     return (
         <>
-            <div className='container'>
+        <br />
+            <button onClick={handleClick}>Display all Buyers</button>
+            <div  className='container'>
                 <div className='row'>
-                <button onClick={handleClick}>Display all Buyers</button>
-                    <p>{displayBuyers}</p>
+                
+                    {displayBuyers}
                 </div>
             </div>
         </>

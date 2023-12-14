@@ -12,7 +12,7 @@ function CreateProperties() {
     const [garden, setGarden] = useState("");
     const [outbuildings, setOutbuildings] = useState("");
     const [freehold, setFreehold] = useState("");
-    const [sellerid, setSellerId] = useState("");
+    const [sellerid, setSellerid] = useState("");
     const [uploadimages, setUploadImages] = useState("");
     const [propertystatus, setPropertyStatus] = useState("")
 
@@ -32,7 +32,7 @@ function CreateProperties() {
                 setGarden("");
                 setOutbuildings("");
                 setFreehold("");
-                setSellerId("");
+                setSellerid("");
                 setUploadImages("");
                 setPropertyStatus("")
             })
@@ -146,14 +146,14 @@ function CreateProperties() {
             onChange={e => setFreehold(e.target.value)}
             required
         />
-        <label htmlFor="PropertySellerId" className="form-label">Seller ID</label>
+        <label htmlFor="PropertySellerid" className="form-label">Seller ID</label>
         <input
-            id="propertySellerId"
+            id="propertySellerid"
             name="sellerid"
             className="form-control"
             type="number"
             value={sellerid}
-            onChange={e => setSellerId(e.target.value)}
+            onChange={e => setSellerid(e.target.value)}
             required
         />
         <label htmlFor="PropertyUploadImages" className="form-label">Upload images</label>
@@ -161,7 +161,7 @@ function CreateProperties() {
             id="propertyUploadImages"
             name="uploadimages"
             className="form-control"
-            type="text"
+            type="image"
             value={uploadimages}
             onChange={e => setUploadImages(e.target.value)}
 

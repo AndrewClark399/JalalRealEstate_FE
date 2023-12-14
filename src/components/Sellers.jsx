@@ -3,8 +3,8 @@ import GetSeller from './GetSeller';
 
 function Sellers() {
     return ( 
-<div>
-<h1>Jalal is the place to sell!</h1>
+<div className = "MainPages">
+<h1><b>Jalal is the Place to Sell!</b></h1>
 
 <CreateSellers/>
 <GetSeller/>

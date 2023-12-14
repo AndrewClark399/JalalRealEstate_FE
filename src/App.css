@@ -1,26 +1,42 @@
-.App {
-  text-align: center;
-}
+.App {}
 
 .App-logo {
   height: 15vmin;
   max-width: 15vmin;
-  
-  
+
+
   pointer-events: none;
 }
 
 .App-logo2 {
   height: 100vmin;
-  
-  
-  
+
+
+
   pointer-events: none;
+
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.Property-images {
+  max-width: 30vmin
+}
+
+.properties-container {
+  width: 65%;
 }
 
 
 
 
+.flex-container {
+  display: flex;
+
+}
 
 .App-header {
   background-color: #000000;
@@ -31,10 +47,107 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 10px;
+
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.App-nav {
+  text-align: center;
+  display: inline
+}
 
+
+.HomePage {
+
+
+  background-color: #2e2e2e;
+
+}
+
+.homeHeading {
+
+
+
+  color: #fbfbfa;
+  text-align: center;
+
+
+}
+
+.MainPages {
+
+
+  background-color: #c5c4c4;
+  padding: 25px;
+
+}
+
+.valueList {
+
+  background-color: #0d0c01;
+  color: #fbfbfa;
+}
+
+.value1 {
+
+  background-color: #070600;
+
+  border-style: inset;
+
+  border-width: thin;
+
+  border-color: #f9e637;
+
+  color: white
+}
+
+.value2 {
+
+  background-color: #070600;
+
+  border-style: inset;
+
+  border-width: thin;
+
+  border-color: #fe25fa;
+
+  color: white
+}
+
+.value3 {
+
+  background-color: #070600;
+
+  border-style: inset;
+
+  border-width: thin;
+
+  border-color: #7272ef;
+
+  color: white
+
+}
+
+.value4 {
+
+  background-color: #070600;
+
+  border-style: inset;
+  border-color: #37f94e;
+  border-width: thin;
+
+  color: white
+}
+
+.value5 {
+
+  background-color: #070600;
+  border-width: thin;
+  border-style: inset;
+  border-color: #fa3f11;
+  color: white
+}
