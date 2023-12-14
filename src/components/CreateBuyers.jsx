@@ -14,7 +14,7 @@ function CreateBuyers() {
 
 
 
- return (<fieldset><form onSubmit={
+ return (<fieldset><form className = "form" onSubmit={
 
         e => {
             e.preventDefault();
@@ -118,7 +118,7 @@ function CreateBuyers() {
             onChange={e => setAddress(e.target.value)}
             required
         />
-
+<br />
         <div className="mt-2">
             <button className="btn btn-success" type="submit">Submit</button>
         </div>

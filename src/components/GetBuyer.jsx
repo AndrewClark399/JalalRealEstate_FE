@@ -72,7 +72,7 @@ function GetBuyer() {
     return (
         <>
         <br />
-            <button onClick={handleClick}>Display all Buyers</button>
+            <button class="btn btn-light btn-lg" onClick={handleClick}>Display all Buyers</button>
             <div  className='container'>
                 <div className='row'>
                 

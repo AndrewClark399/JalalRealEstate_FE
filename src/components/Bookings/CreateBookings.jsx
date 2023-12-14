@@ -16,7 +16,7 @@ function CreateBookings() {
 }, []);
  
   return (  
-    <form onSubmit={e => {e.preventDefault();
+    <form className="form" onSubmit={e => {e.preventDefault();
 
 axios.get("http://localhost:5000/bookings").then(response => {
 
