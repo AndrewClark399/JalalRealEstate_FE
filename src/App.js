@@ -26,14 +26,15 @@ function App() {
 
           </div>
           <img src={logo} className="App-logo" alt="logo" />
-          <div className= "App-nav" ><Link to='/'> HOME </Link>
-          <Link to='/buyers'> BUYERS </Link>
-          <Link to='/sellers'> SELLERS </Link>
-          <Link to='/properties'> PROPERTIES </Link>
-          <Link to='/bookings'> BOOKINGS </Link>
+          <div className= "App-nav" ><Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to='/'> HOME </Link>
+          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to='/buyers'> BUYERS </Link>
+          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to='/sellers'> SELLERS </Link>
+          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"to='/properties'> PROPERTIES </Link>
+          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"to='/bookings'> BOOKINGS </Link>
           </div>
 
-        </nav>
+        </nav> 
+
         </header>
         <Routes>
 
